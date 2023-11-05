@@ -1,0 +1,35 @@
+<h1>{{ normaName }}</h1>
+<hr>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{ normaName }}</dd>
+
+    <td>Edad:</td>
+    <dd>{{ normalAge }}</dd>
+
+    <td>Método:</td>
+    <dd>{{ heroDescription }}</dd>
+
+    <td>Capitalizado:</td>
+    <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<button 
+    *ngIf="normaName !== 'Spiderman'"
+    class="btn btn-primary mx-2"
+    (click)="changeNameHero()">
+    Cambiar nombre
+</button>
+
+<button
+    *ngIf="normalAge !== 10"
+    class="btn btn-primary" 
+    (click)="changeAgeHero()">
+    Cambiar edad
+</button>
+
+<button
+    class="btn btn-primary mx-2" 
+    (click)="resetParams()">
+    Reset
+</button>
